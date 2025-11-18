@@ -29,5 +29,4 @@ jobs:
 
       - name: Deploy to server (ejemplo de despliegue)
         run: |
-          echo "Simulación de despliegue"
-          ls -lh ./published
+           scp -r ./published username@server:/path/to/deploy
