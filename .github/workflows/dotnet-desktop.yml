@@ -3,7 +3,7 @@ name: Build and Deploy .NET Desktop App (.NET 9)
 on:
   push:
     branches:
-      - main  # Automáticamente se ejecuta cuando se suben cambios a la rama principal
+      - main
 
 jobs:
   build:
