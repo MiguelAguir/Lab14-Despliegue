@@ -18,7 +18,5 @@ COPY --from=build /app/publish .
 # Render usa la variable $PORT, así que configuramos ASP.NET para usarla
 ENV ASPNETCORE_URLS=http://0.0.0.0:${PORT}
 
-# Iniciar la aplicación
-ENTRYPOINT ["dotnet", "Lab14-Despliegue.dll"]
-
-
+# Iniciar la aplicación (NOMBRE REAL DEL DLL)
+ENTRYPOINT ["dotnet", "ReportesAPI.dll"]
