@@ -21,3 +21,4 @@ ENV ASPNETCORE_URLS=http://0.0.0.0:${PORT}
 # Iniciar la aplicación
 ENTRYPOINT ["dotnet", "Lab14-Despliegue.dll"]
 
+
