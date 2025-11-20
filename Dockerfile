@@ -1,5 +1,5 @@
 # 1. Etapa de construcción del proyecto
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # Copia todos los archivos
@@ -9,7 +9,7 @@ COPY . .
 RUN dotnet publish -c Release -o /app/publish
 
 # 2. Etapa final (runtime)
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
 WORKDIR /app
 
 # Copiar lo publicado
@@ -20,3 +20,4 @@ ENV ASPNETCORE_URLS=http://0.0.0.0:${PORT}
 
 # Iniciar la aplicación
 ENTRYPOINT ["dotnet", "Lab14-Despliegue.dll"]
+
